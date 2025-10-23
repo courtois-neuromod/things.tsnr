@@ -1,5 +1,6 @@
 <!-- vim: syntax=Markdown -->
-# Courtois-NeuroMod: things.tsnr subdataset, temporal signal-to-noise maps derived from things.fmriprep derivative dataset 
+# Courtois-NeuroMod: things.tsnr subdataset 
+## Temporal signal-to-noise maps derived from things.fmriprep derivative dataset 
 
 The [Courtois project on Neural Modelling (Courtois NeuroMod)](https://www.cneuromod.ca/) is an extensive dataset of individual human brain activity and behaviour.
 
