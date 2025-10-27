@@ -1,11 +1,39 @@
 <!-- vim: syntax=Markdown -->
-# Courtois-NeuroMod: things.tsnr subdataset 
-## Temporal signal-to-noise maps derived from things.fmriprep derivative dataset 
+# things.tsnr, a Courtois-NeuroMod subdataset 
+## Temporal signal-to-noise (TSNR) maps derived from the things.fmriprep derivative dataset 
 
-The [Courtois project on Neural Modelling (Courtois NeuroMod)](https://www.cneuromod.ca/) is an extensive dataset of individual human brain activity and behaviour.
+The [Courtois project on Neural Modelling (Courtois NeuroMod)](https://www.cneuromod.ca/) is assembling an extensive dataset of individual human brain activity and behavioural data.
 
 The current subdataset is organized following the [brain imaging data structure (BIDS)](https://bids.neuroimaging.io/) (including extensions in development) and contains:
 - temporal signal-to-noise maps in NI152NLin2009cAsym and T1w volumetric space for each run completed by each subject
-- a mean temporal signal-to-noise map in NI152NLin2009cAsym and T1w volumetric space averaged from every run for each subject
+- an average temporal signal-to-noise map per subject in NI152NLin2009cAsym and T1w volumetric space
 
 Courtois NeuroMod data are [freely shared with the scientific community](https://docs.cneuromod.ca/en/latest/ACCESS.html) to advance research at the interface of neuroscience and artificial intelligence.
+
+
+-----------------
+
+## Code
+
+TSNR maps are computed with scripts from the ``dsprep`` library (https://github.com/courtois-neuromod/ds_prep) installed as a submodule under ``./code``
+
+Run-wise TSNR maps are produced with the ``make_tsnr_maps.py`` script. Maps are saved per session as ``sub-0*/ses-0*/func/sub-0*_ses-*_task-things_run-*_space-{MNI152NLin2009cAsym, T1w}_stat-tsnr_statmap.nii.gz`` in both MNI and native subject space. 
+
+For example,
+```bash
+FMRIPREPDIR="path/to/things.fmriprep"
+OUTDIR="path/to/things.tnsr"
+
+python code/ds_prep/derivatives/tsnr/make_tsnr_maps.py things ${FMRIPREPDIR} ${OUTDIR}
+```
+
+Subject-wise TSNR, which average TSNR maps from all runs, are produced with the ``avg_tsnr_maps.py`` script. Maps are saved per subject as ``sub-0*/sub-0*_task-things_space-{MNI152NLin2009cAsym, T1w}_stat-avgtsnr_statmap.nii.gz`` in both MNI and native subject space. 
+
+For example,
+```bash
+DATADIR="path/to/things.tnsr"
+
+python code/ds_prep/derivatives/tsnr/avg_tsnr_maps.py things ${DATADIR}
+```
+
+
