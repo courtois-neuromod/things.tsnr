@@ -27,7 +27,7 @@ OUTDIR="path/to/things.tnsr"
 python code/ds_prep/derivatives/tsnr/make_tsnr_maps.py things ${FMRIPREPDIR} ${OUTDIR}
 ```
 
-Subject-wise TSNR, which average TSNR maps from all runs, are produced with the ``avg_tsnr_maps.py`` script. Maps are saved per subject as ``sub-0*/sub-0*_task-things_space-{MNI152NLin2009cAsym, T1w}_stat-avgtsnr_statmap.nii.gz`` in both MNI and native subject space. 
+Subject-wise TSNR maps, which average TSNR maps from all runs, are produced with the ``avg_tsnr_maps.py`` script. Maps are saved per subject as ``sub-0*/sub-0*_task-things_space-{MNI152NLin2009cAsym, T1w}_stat-avgtsnr_statmap.nii.gz`` in both MNI and native subject space. 
 
 For example,
 ```bash
