@@ -1,5 +1,5 @@
 <!-- vim: syntax=Markdown -->
-# things.tsnr, a Courtois-NeuroMod subdataset 
+# things.tsnr: a Courtois-NeuroMod subdataset 
 ## Temporal signal-to-noise (TSNR) maps derived from the things.fmriprep derivative dataset 
 
 The [Courtois project on Neural Modelling (Courtois NeuroMod)](https://www.cneuromod.ca/) is assembling an extensive dataset of individual human brain activity and behavioural data.
