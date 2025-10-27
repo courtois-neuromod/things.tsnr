@@ -17,7 +17,7 @@ Courtois NeuroMod data are [freely shared with the scientific community](https:/
 
 TSNR maps are computed with scripts from the ``dsprep`` library (https://github.com/courtois-neuromod/ds_prep) installed as a submodule under ``./code``
 
-Run-wise TSNR maps are produced with the ``make_tsnr_maps.py`` script. Maps are saved per session as ``sub-0*/ses-0*/func/sub-0*_ses-*_task-things_run-*_space-{MNI152NLin2009cAsym, T1w}_stat-tsnr_statmap.nii.gz`` in both MNI and native subject space. 
+**Run-wise TSNR maps** are produced with the ``make_tsnr_maps.py`` script. Maps are saved per session as ``sub-0*/ses-0*/func/sub-0*_ses-*_task-things_run-*_space-{MNI152NLin2009cAsym, T1w}_stat-tsnr_statmap.nii.gz`` in both MNI and native subject space. 
 
 For example,
 ```bash
@@ -27,7 +27,7 @@ OUTDIR="path/to/things.tnsr"
 python code/ds_prep/derivatives/tsnr/make_tsnr_maps.py things ${FMRIPREPDIR} ${OUTDIR}
 ```
 
-Subject-wise TSNR maps, which average TSNR maps from all runs, are produced with the ``avg_tsnr_maps.py`` script. Maps are saved per subject as ``sub-0*/sub-0*_task-things_space-{MNI152NLin2009cAsym, T1w}_stat-avgtsnr_statmap.nii.gz`` in both MNI and native subject space. 
+**Subject-wise TSNR maps**, which average TSNR maps from all runs, are produced with the ``avg_tsnr_maps.py`` script. Maps are saved per subject as ``sub-0*/sub-0*_task-things_space-{MNI152NLin2009cAsym, T1w}_stat-avgtsnr_statmap.nii.gz`` in both MNI and native subject space. 
 
 For example,
 ```bash
