@@ -1,0 +1,5 @@
+[submodule "code/ds_prep"]
+	path = code/ds_prep
+	url = git@github.com:courtois-neuromod/ds_prep.git
+	datalad-id = 1ea56af2-8e14-11ea-ba71-93977911da7b
+	datalad-url = git@github.com:courtois-neuromod/ds_prep.git
